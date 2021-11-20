@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import { getAuth } from "firebase/auth";
+import ActivityScreen from "./screens/ActivityScreen/ActivityScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,10 +18,18 @@ const RootStack = () => {
   }, []);
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        contentStyle: {
+          backgroundColor: "#fff",
+        },
+      }}
+    >
       {idToken ? (
         <>
           <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Activity" component={ActivityScreen} />
         </>
       ) : (
         <>

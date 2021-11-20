@@ -1,15 +1,16 @@
+import { Layout, Text } from "@ui-kitten/components";
 import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { AppleAuthButton } from "./AppleAuthButton";
 
 interface LoginScreenProps {}
 
 const LoginScreen = ({}: LoginScreenProps) => {
   return (
-    <View style={styles.container}>
+    <Layout style={styles.container}>
       <Text>LoginScreen</Text>
       <AppleAuthButton />
-    </View>
+    </Layout>
   );
 };
 

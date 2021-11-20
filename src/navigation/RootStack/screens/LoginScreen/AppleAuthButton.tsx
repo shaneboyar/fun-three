@@ -4,7 +4,6 @@ import { ActivityIndicator } from "react-native";
 import * as SecureStore from "expo-secure-store";
 import { AppleAuthenticationCredential } from "expo-apple-authentication";
 import { getDatabase, ref, set, get } from "firebase/database";
-import dayjs from "dayjs";
 import { getAuth, signInWithCredential, OAuthProvider } from "firebase/auth";
 
 interface AppleAuthButtonProps {}
