@@ -17,5 +17,9 @@ const LoginScreen = ({}: LoginScreenProps) => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });

@@ -1,4 +1,9 @@
+import { Activity } from "../../plan";
+
 export type RootStackParamList = {
   Home: undefined;
-  Activity: undefined;
+  Activity: {
+    currentActivity: Activity;
+    setCurrentActivity: React.Dispatch<React.SetStateAction<Activity>>;
+  };
 };
